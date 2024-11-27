@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Example</title>
+  <style>
+    /* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .box {
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 300px; /* Responsive box size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+  }
+  
+  /* Media Queries */
+  
+  /* For screens smaller than 768px (tablet) */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column; /* Stack boxes vertically */
+    }
+  }
+  
+  /* For screens smaller than 480px (mobile) */
+  @media (max-width: 480px) {
+    header, footer {
+      padding: 0.5rem 0;
+      font-size: 1rem;
+    }
+  
+    .box {
+      font-size: 0.9rem;
+      padding: 15px;
+    }
+  }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Webpage</h1>
+  </header>
+  <main>
+    <section class="content">
+      <div class="box" style="background-color: red;">Box 1</div>
+      <div class="box" style="background-color: green;">Box 2</div>
+      <div class="box" style="background-color: yellow;">Box 3</div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Responsive Design Example</p>
+  </footer>
+</body>
+</html>
